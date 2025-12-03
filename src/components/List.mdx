@@ -1,0 +1,36 @@
+import {Meta, Primary, Controls, Story} from "@storybook/addon-docs/blocks";
+import List from "./List";
+import * as ListStories from "./List.stories.jsx";
+
+<Meta of={ListStories} />
+# Tarjeta de Interprete(`<List />`)
+
+## Descripción General
+The `List` component is a reusable UI element designed to display an item, such as an actor or a movie character, 
+with an image, a name, and a description. It is accessible and supports highlighting items associated with highly-rated movies.
+
+<Primary />
+
+---
+
+## Tabla de Props (API Docs)
+{/*2. Etiqueta <Controls />*/}
+{/*Genera automaticamente la tabla de props y tipos a partir del JSDoc y el componente List*/}
+
+<Controls />
+
+---
+
+## Ejemplos de Uso
+
+<Story of={ListStories.Default} name="Default" />
+<Story of={ListStories.Destacado} name="Destacado" />
+
+---
+
+## Accesibilidad
+
+- The component uses semantic HTML (`article`, `figure`, `header`).
+- It includes `aria-label` to provide context to screen readers, especially when `esNota10` is true.
+- The image has an `alt` attribute describing the content.
+- It is focusable via `tabIndex="0"`.

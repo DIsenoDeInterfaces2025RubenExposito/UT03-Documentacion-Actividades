@@ -1,0 +1,60 @@
+import { Meta, Primary, Controls, Story } from "@storybook/addon-docs/blocks";
+import Nav from "./Nav";
+import * as NavStories from "./Nav.stories.jsx";
+
+<Meta of={NavStories} />
+# Navegación (`
+<Nav />
+`)
+
+## Descripción General
+
+The `Nav` component is a responsive navigation menu that displays links to different pages of the application.
+It includes a hamburger menu for mobile devices and automatically highlights the active page using React Router's `NavLink`.
+
+<Primary />
+
+---
+
+## Tabla de Props (API Docs)
+
+{/* Genera automáticamente la tabla de props y tipos a partir del JSDoc y el componente Nav */}
+
+<Controls />
+
+---
+
+## Ejemplos de Uso
+
+<Story of={NavStories.Default} name="Default" />
+
+---
+
+## Características
+
+### Responsive Design
+
+- **Desktop**: Muestra todos los enlaces horizontalmente
+- **Mobile**: Menú hamburguesa que se expande/colapsa
+
+### Navegación Activa
+
+- Utiliza `NavLink` de React Router para resaltar la página actual
+- Los enlaces activos se muestran en negrita y subrayados
+
+### Enlaces Disponibles
+
+1. **Inicio** (`/`) - Página principal
+2. **Películas** (`/peliculas`) - Listado de películas
+3. **Intérpretes** (`/interpretes`) - Listado de actores
+4. **Admin** (`/admin`) - Panel de administración
+
+---
+
+## Accesibilidad
+
+- El botón hamburguesa incluye `aria-label` y `aria-expanded` para lectores de pantalla
+- El menú tiene `aria-label="Navegación principal"` para contexto
+- Focus visible en el botón hamburguesa con anillo azul
+- Navegación por teclado completamente funcional
+- Semántica HTML correcta con elemento `<nav>`
