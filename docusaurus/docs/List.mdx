@@ -1,0 +1,51 @@
+---
+id: List
+title: Tarjeta de Intérprete (<List />)
+---
+
+import List from "../components/List";
+
+# Tarjeta de Interprete(`<List />`)
+
+## Descripción General
+
+The `List` component is a reusable UI element designed to display an item, such as an actor or a movie character,
+with an image, a name, and a description. It is accessible and supports highlighting items associated with highly-rated movies.
+
+---
+
+## Tabla de Props (API Docs)
+
+{/* 2. Etiqueta <Controls /> */}
+{/* Genera automaticamente la tabla de props y tipos a partir del JSDoc y el componente List */}
+
+---
+
+## Ejemplos de Uso
+
+<List
+  nombre="Bruce Willis"
+  esNota10={false}
+  foto="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Bruce_Willis_by_Gage_Skidmore_3.jpg/330px-Bruce_Willis_by_Gage_Skidmore_3.jpg"
+>
+  Bruce Willis es un actor conocido por sus roles en películas de acción y
+  ciencia ficción.
+</List>
+
+<List
+  nombre="Haley Joel Osment"
+  esNota10={true}
+  foto="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Haley_Joel_Osment_TIFF_2014.jpg/500px-Haley_Joel_Osment_TIFF_2014.jpg"
+>
+  Haley Joel Osment es un actor estadounidense conocido por su interpretación
+  del niño que 've gente muerta' en 'El sexto sentido'.
+</List>
+
+---
+
+## Accesibilidad
+
+- The component uses semantic HTML (`article`, `figure`, `header`).
+- It includes `aria-label` to provide context to screen readers, especially when `esNota10` is true.
+- The image has an `alt` attribute describing the content.
+- It is focusable via `tabIndex="0"`.
